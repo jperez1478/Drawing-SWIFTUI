@@ -9,10 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            Color.teal
+                .ignoresSafeArea()
+           Image("ozma")
+                .resizable()
+                .scaledToFit()
+                .clipShape(Circle())
+                .overlay{
+                    Circle()
+                        .stroke(lineWidth: 8)
+                        .foregroundColor(.white)
+                }
+                .frame(width: 250)
+            
+                }
+        }
     }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
